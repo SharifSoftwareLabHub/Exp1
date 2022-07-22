@@ -16,16 +16,17 @@ public class MyStepdefs {
     public void before() {
         calculator = new Calculator();
     }
-    @When("^I add the two values$")
-    public void iAddTheTwoValues() {
-        result = calculator.add(value1, value2);
-        System.out.print(result);
-    }
 
     @Given("^Two input Values, (\\d+) and (\\d+)$")
     public void twoInputValuesAnd(int arg0, int arg1) {
         value1 = arg0;
         value2 = arg1;
+    }
+
+    @When("^I add the two values$")
+    public void iAddTheTwoValues() {
+        result = calculator.add(value1, value2);
+        System.out.print(result);
     }
 
     @Then("^I expect the result  (\\d+)$")
