@@ -6,7 +6,7 @@ Feature: Calculator
     Then I expect the result 3
 
   Scenario Outline: add two numbers
-    Given Two input values, <first> and <second>
+    Given Two input Values, <first> and <second>
     When I add the two values
     Then I expect the result <result>
     Examples:

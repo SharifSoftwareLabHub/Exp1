@@ -17,7 +17,7 @@ public class MyStepdefs {
         calculator = new Calculator();
     }
 
-    @Given("^Two input Values, (\\d+) and (\\d+)$")
+    @Given("^Two input Values, (-?\\d+) and (-?\\d+)$")
     public void twoInputValuesAnd(int arg0, int arg1) {
         value1 = arg0;
         value2 = arg1;
@@ -32,12 +32,5 @@ public class MyStepdefs {
     @Then("^I expect the result (\\d+)$")
     public void iExpectTheResult(int arg0) {
         Assert.assertEquals(arg0, result);
-    }
-
-
-    @Given("^Two input values, (-?\\d+) and (\\d+)$")
-    public void twoInputValuesFirstAndSecond(int arg0, int arg1) {
-        value1 = arg0;
-        value2 = arg1;
     }
 }
